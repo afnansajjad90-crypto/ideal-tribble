@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#ffca98",
+                        "on-secondary-fixed": "#2c1600",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "tertiary-container": "#00452d",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-fixed-dim": "#85d7ad",
+                        "on-tertiary-container": "#64b68e",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "surface-tint": "#3f6653",
+                        "tertiary": "#002d1c",
+                        "on-surface-variant": "#414844",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#7a532a",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "error": "#ba1a1a",
+                        "on-background": "#191c1d",
+                        "on-primary-container": "#86af99",
+                        "outline": "#717973",
+                        "surface-dim": "#d9dadb",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "primary": "#012d1d",
+                        "background": "#f8f9fa",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "on-primary-fixed": "#002114",
+                        "secondary": "#7d562d",
+                        "primary-container": "#1b4332",
+                        "secondary-fixed": "#ffdcbd",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-container-low": "#f3f4f5",
+                        "outline-variant": "#c1c8c2",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#a0f4c8",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9fa",
+                        "on-surface": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "xl": "40px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "gutter": "20px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "container-margin": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Work Sans"],
+                        "headline-lg": ["Work Sans"],
+                        "data-tabular": ["Work Sans"],
+                        "label-md": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "headline-xl": ["Work Sans"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "data-tabular": ["14px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 border-b border-[#E9ECEF] dark:border-slate-800 transition-colors">
+<div class="flex justify-between items-center px-6 py-4 max-w-[1440px] mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-[#1B4332] dark:text-emerald-500">Gujjar Dairy</div>
+<nav class="hidden md:flex items-center gap-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#1B4332] dark:text-emerald-400 border-b-2 border-[#1B4332] dark:border-emerald-400 pb-1 transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors" href="#process">Process</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors" href="#">Distribution</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors" href="#about">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="font-['Work_Sans'] font-medium text-sm text-[#1B4332] dark:text-emerald-400 hover:opacity-80 transition-opacity">Sign In</button>
+<button class="bg-[#1B4332] text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-container transition-all shadow-sm">Explore Yields</button>
+</div>
+</div>
+</header>
+<main>
+<section class="relative h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Dairy Farm Sunrise" class="w-full h-full object-cover brightness-75" data-alt="expansive lush green pasture with grazing cows at sunrise soft golden light morning mist corporate farm aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBojD75DpDRsiHdi9eushNAdIsPVoSgIilp53MSmrqhLCIVZDx0dx1vZ8I5nSWZOLYrPu5CWrLLHuBOMbgwX-ry7O6D34_5j_fH6N7dV8ByuZajs1T_R5Z0GhGbWMIW45Ijdj5Wx02tRFPsRXi1c6UYA3zwqXNOFIiKui4_ogcB4tIlxozGRX9ze-p0fh3ESAAmJte6lOy3g6ZASOl0WrHoc7QpPKHslWuqEOFMOjCO0g7xR2uk_g6nsvVcFFAicQCvA8CZbyIYJK6I"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#012d1d]/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-6 w-full">
+<div class="max-w-2xl text-white">
+<span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded text-xs font-bold tracking-widest uppercase mb-6">Established 1984</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-none">Purity Born From Precision &amp; Heritage</h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 leading-relaxed">Bridging the gap between traditional dairy farming and modern agricultural excellence. We deliver premium quality milk through rigorous technological standards.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-white text-[#1B4332] px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 transition-transform">Schedule a Tour</button>
+<button class="border border-white/40 backdrop-blur-md bg-white/10 px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all">Our Standards</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="about">
+<div class="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+<img alt="Farm Heritage" class="rounded-2xl shadow-2xl relative z-10 w-full aspect-[4/5] object-cover" data-alt="close up of a healthy dairy cow in a clean modern ventilated barn soft ambient light focus on details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7axh47ljPzWjMgr_gUihCayUqRGaDyDHYhg5pLbxMpUvJKkPsCXiAtbI83diYuk1BQs01i6U0ZAzTkb2yAYfC2hrnsnqjlbBl9iwnH-0xYSJX8YsJeKJp1NNXrbLpkFgPoYKAjx55UCvEYBOb6bnSYiTR8j4xcvXPuKnfmobD8CgRCo0zCCdIYRT5ea3iqXgiYSEogfkVQ30Ru8Jp-DskR-Bwc9kckCWTtp6G3PJElfeXfkMRxJvtUOAywLAUEwe9cGlTKW4ABjLy"/>
+<div class="absolute bottom-8 right-8 bg-[#1B4332] p-8 rounded-2xl shadow-2xl text-white z-20 max-w-xs">
+<p class="font-headline-md text-headline-md mb-2">40+</p>
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-widest">Years of Continuous Operational Excellence</p>
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<h2 class="text-secondary font-headline-lg text-headline-lg mb-4">Verdant Heritage</h2>
+<h3 class="font-headline-xl text-headline-xl text-primary mb-6">Agricultural Precision, Family Roots.</h3>
+<p class="font-body-lg text-body-lg text-slate-600">Gujjar Dairy was founded on the principle that milk should be as natural as the pastures it comes from. Today, we manage over 500 head of elite livestock using IoT-monitored environments to ensure the highest yield and welfare standards.</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="border-l-4 border-secondary-fixed-dim pl-4">
+<h4 class="font-bold text-primary mb-1">Cold Chain Logistics</h4>
+<p class="text-sm text-slate-500">Maintaining exact 4°C environments from farm to fridge.</p>
+</div>
+<div class="border-l-4 border-secondary-fixed-dim pl-4">
+<h4 class="font-bold text-primary mb-1">Zero-Antibiotic Policy</h4>
+<p class="text-sm text-slate-500">Strict organic feeding protocols and natural healthcare.</p>
+</div>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                        Discover Our Full Story <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface" id="process">
+<div class="max-w-[1440px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Journey of Milk</h2>
+<p class="font-body-md text-body-md text-slate-600 uppercase tracking-widest">A Modern Precision Process</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-[#E9ECEF] hover:shadow-xl transition-all group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">grass</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">1. Ethical Sourcing</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Our cattle roam free on pesticide-free pastures, ensuring the nutritional profile of every drop is superior.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-[#E9ECEF] hover:shadow-xl transition-all group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">2. Smart Extraction</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Automated milking systems monitor health vitals in real-time to prevent contamination at the source.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-[#E9ECEF] hover:shadow-xl transition-all group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">science</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">3. Grade Testing</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Every batch undergoes 24 rigorous lab tests for fat content, purity, and microbial levels.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-[#E9ECEF] hover:shadow-xl transition-all group">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">4. Rapid Supply</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Optimized logistics ensure our dairy reaches distribution hubs within 6 hours of collection.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div class="max-w-xl">
+<h2 class="font-headline-xl text-headline-xl text-primary">A Vision of Purity</h2>
+<p class="text-slate-600 mt-4">Captured moments of our daily operations and the serene environment of Gujjar Farm.</p>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-medium hidden md:block">View Full Gallery</button>
+</div>
+<div class="grid grid-cols-12 grid-rows-2 gap-4 h-[800px]">
+<div class="col-span-12 md:col-span-6 row-span-2 relative group overflow-hidden rounded-2xl">
+<img alt="Fresh Milk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="poured fresh milk into a glass against a minimalist green background artistic food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_fON57q9m6-mkC6UP3kuoalG16opGAlIvp78sTu3l23HBVb0aOyp66eu0QrI_5k9nQkYg9AvZQwBT_KAQhJERLIXg_U-POXgAq_vWJF-J1H62PgFKWIEqSyaj1xRUJ3Ua6BnB4hOn7_Te2o8o21OwoYXgqeOCxvyMu8mmRYiwIfqzi1EbNsKw7hJ59vqDFrCw6QxCKomO1dV1agmhcDfD0lvX-HIYyr8pG8W266SjU2m4NzDv_5TRUQZYXT32cR1fdw8eNSx_TrDU"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="col-span-12 md:col-span-6 row-span-1 relative group overflow-hidden rounded-2xl">
+<img alt="Farm Sunset" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="golden hour over a rolling hills landscape of a dairy farm with silos and wooden fences" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn6F0BWvoA91ihBRvGykgt2B_IvAwiFFrLRn_M3N6LCWdIlWa6bD-5a75jYKklqfqenqOuNnH69CT51MAGf0gk7PxrFxPvS6rni4CJjMPBJHnvUMrMOvhraDR1FeMTxUc1nDchWhlh0Vw_NbYnvajvdqAyrR1vFUkyQ6_HKmc3kDZQ-QQ6AxH_43IMnlw-Q4UoikUhTKFqo4HoTeqbaX7PNwulTU3xA02iSaCp3fA5eKe4zHtxu-314GuL6e2KwTnHelG7-qZS6trX"/>
+</div>
+<div class="col-span-12 md:col-span-3 row-span-1 relative group overflow-hidden rounded-2xl">
+<img alt="Modern Processing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close up of industrial milk processing steel pipes and modern dairy machinery in a sterile facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuFvibKcA53hYSLynBhzeFFhM5E_sG8Kux8Q1ig1mRV1gvrJJljjrccu2JxWGHXG_42_LPVOTDyVcFlZQ7RlCQ9ZRyhLk5UbgkBVl_hkRVYuzF6C1TvTmhlQvLxHZQw0JecKXcMhix8FSErfNHSVJtqHDK14k2RZCWl9hTq03XLFV4U5xnZBEVgXsrHsepJGkBxZj4qLh6nCb_XjY5N0csDjmGOIkMzKtySc36QZYSYGqY_VVywWz5gj_ZeVYfLSzln9_e2Dbu8KdY"/>
+</div>
+<div class="col-span-12 md:col-span-3 row-span-1 relative group overflow-hidden rounded-2xl">
+<img alt="Our Farmers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up portrait of a friendly farmer smiling in a green field with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzA55TwiKvKNuAH00k3XL_lc1Fevyz_dqOWu647lnzILQ8qiSdgpoMlafRcegJbkEv7M-MlJVbNUOkrB5X9dLiwfWKMgk75poc_gfdUAzKYtFIzNQ4a6VSwKjISF7muIGlqeXCPxLOnN44kfoDm-KllTgM6xcomKAM-sZZ6Fo764jjKRt2QfLi5y_LOVZvW4g04jBOkMPQAR7jAC6lX6mQXuMnZHdO4K0h4wmhHiR6Ec-r3OI3W048eREPgaCF3dJK0paRxhZtbRmA"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary-container text-white">
+<div class="max-w-[1440px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-8">Ready for Freshness?</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-12">Connect with our supply chain team or visit our administrative office at the heart of the farm. We value transparency in every interaction.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed p-3 bg-white/10 rounded-full">location_on</span>
+<div>
+<h4 class="font-bold">Primary Farm &amp; HQ</h4>
+<p class="opacity-70">122 Dairy Lane, Green Valley, Punjab 54000</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-fixed p-3 bg-white/10 rounded-full">mail</span>
+<div>
+<h4 class="font-bold">Logistics Support</h4>
+<p class="opacity-70">support@gujjar-dairy.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-3xl p-8 shadow-2xl">
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-primary font-label-md text-label-md">Full Name</label>
+<input class="w-full border-b border-slate-200 focus:border-primary outline-none py-2 text-slate-800 placeholder-slate-400" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-primary font-label-md text-label-md">Email Address</label>
+<input class="w-full border-b border-slate-200 focus:border-primary outline-none py-2 text-slate-800 placeholder-slate-400" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-primary font-label-md text-label-md">Inquiry Type</label>
+<select class="w-full border-b border-slate-200 focus:border-primary outline-none py-2 text-slate-800 bg-transparent">
+<option>Retail Distribution</option>
+<option>Bulk Supply</option>
+<option>Farm Visits</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-primary font-label-md text-label-md">Message</label>
+<textarea class="w-full border border-slate-200 rounded-xl focus:border-primary outline-none p-4 text-slate-800" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-[#1B4332] text-white py-4 rounded-xl font-bold hover:scale-[1.02] active:scale-100 transition-all shadow-lg">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#F8F9FA] dark:bg-slate-950 border-t border-[#E9ECEF] dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-[1440px] mx-auto w-full">
+<div class="mb-8 md:mb-0">
+<p class="font-['Work_Sans'] text-xs uppercase tracking-widest text-[#1B4332] dark:text-emerald-400 font-bold mb-2">Gujjar Dairy Farm</p>
+<p class="font-['Work_Sans'] text-xs uppercase tracking-widest text-slate-400">© 2024 Gujjar Dairy Farm. Agricultural Precision &amp; Heritage.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex gap-6 font-['Work_Sans'] text-xs uppercase tracking-widest text-slate-400">
+<a class="hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors duration-200" href="#">Quality Standards</a>
+<a class="hover:text-[#1B4332] dark:hover:text-emerald-300 transition-colors duration-200" href="#">Contact Support</a>
+</div>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
